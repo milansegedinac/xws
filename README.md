@@ -5,6 +5,6 @@ Ovo je primer REST backend aplikacija koja koristi MySql rađene na predmetu <i>
   <li>preuzeti aplikaciju pomoću
   <pre>git clone https://github.com/milansegedinac/xws.git</pre>
   </li>
-  <li>postaviti sve konfiguracione parametre (datasource za konekciju na bazu, logger fajlovi, ...)</li>
+  <li>postaviti sve konfiguracione parametre (datasource, logger fajlovi, ...)</li>
   <li>preuzeti projekat importovati u Eclipse i deployovati na Tomee server</li>
 </ol>
