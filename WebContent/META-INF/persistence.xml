@@ -1,0 +1,26 @@
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+   http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+
+	<persistence-unit name="xws" transaction-type="JTA">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>xws</jta-data-source>
+		<non-jta-data-source>unmanagedxws</non-jta-data-source>
+		<class>rs.ac.uns.ftn.xws.entities.payments.Invoice</class>
+		<class>rs.ac.uns.ftn.xws.entities.payments.InvoiceItem</class>
+		<class>rs.ac.uns.ftn.xws.entities.users.User</class>
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.transaction.flush_before_completion"
+				value="true" />
+			<property name="hibernate.transaction.auto_close_session"
+				value="true" />
+			<property name="hibernate.transaction.manager_lookup_class"
+				value="org.apache.openejb.hibernate.TransactionManagerLookup" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>
